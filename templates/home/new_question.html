@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}{{site_info.title}}{% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="card border-0 shadow table-wrapper table-responsive">
+    <div class="card-header">
+        <h1 class="h4">Create new Question here. Marine Expert allowed to add new question</h1>
+        <p>This is the designated area for an expert. Here you can create questions, which may be available for
+            answering in the evaluation process, if the question is approved by the site admin.</p>
+        <p>Enter the name of the question in the space provided. You have to provide minimum three options under a
+            question. Then save. Next you will find button to add more options.</p>
+    </div>
+
+    <div class="card-body">
+        <div hx-target="this" hx-swap="outerHTML">
+            <form method="post" action="{% url 'home:new_question' %}">
+                {% csrf_token %}
+                {{ option_formset.management_form }}
+                {% for q_form in question_form %}
+                <div class="card bg-bgreen mb-4">
+                    {{ q_form }}
+                </div>
+                {% endfor %}
+                {% for form in option_formset %}
+                <div class="card bg-lgreen p-3 mb-4">
+                    {{ form }}
+                </div>
+                {% endfor %}
+                <div class="btn-group">
+                    <input class="btn btn-outline-primary" type="submit" name="add_more" hx-post="." id="add_more"
+                        value="Save and Stay">
+                    <input class="btn btn-outline-primary" type="submit" name="save" hx-post="." id="save" value="Save">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

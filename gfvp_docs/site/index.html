@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Biofuel Evaluation Process">
+        <meta name="author" content="Haradhan Sharma">
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>GFVP Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">GFVP Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="accounts.html" class="nav-link">Accounts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="crm.html" class="nav-link">CRM</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="doc.html" class="nav-link">Doc</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="evaluation.html" class="nav-link">Evaluation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="feedback.html" class="nav-link">Feedback</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="gfvp.html" class="nav-link">Project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="glossary.html" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="guide.html" class="nav-link">User Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="home.html" class="nav-link">Home And Dash</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="navigation.html" class="nav-link">Navigation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="cookies.html" class="nav-link">GF Cookies</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="accounts.html" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/haradhansharma/biofuel/blob/v24123/gfvp_docs/docs/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#gfvp_-_green_fuel_validation_platform" class="nav-link">GFVP - Green Fuel Validation Platform</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#table_of_contents" class="nav-link">Table of Contents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#project_overview" class="nav-link">Project Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#project_structure" class="nav-link">Project Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#technology_stack" class="nav-link">Technology Stack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#contributors" class="nav-link">Contributors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mkdocs_commands" class="nav-link">Mkdocs Commands</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#documentation" class="nav-link">Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#license" class="nav-link">License</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="gfvp_-_green_fuel_validation_platform">GFVP - Green Fuel Validation Platform<a class="headerlink" href="#gfvp_-_green_fuel_validation_platform" title="Permanent link">&para;</a></h1>
+<pre><code>## Solo Developer:
+    Haradhan Sharma
+    Email: haradhan.sharma@gmail.com
+    Website: [hrdnsh.com](http://hrdnsh.com)
+</code></pre>
+<h2 id="table_of_contents">Table of Contents<a class="headerlink" href="#table_of_contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#project-overview">Project Overview</a></li>
+<li><a href="#project-structure">Project Structure</a></li>
+<li><a href="#technology-stack">Technology Stack</a></li>
+<li><a href="#contributors">Contributors</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#license">License</a></li>
+</ol>
+<hr />
+<h2 id="project_overview">Project Overview<a class="headerlink" href="#project_overview" title="Permanent link">&para;</a></h2>
+<p>GFVP (Green Fuel Validation Platform) is a web application built using Django 4.0.1 and various frontend technologies. It serves as a platform for validating and managing green fuel-related data. The application allows different types of users to interact with the system, and it's designed to support various features for managing data related to green fuels.</p>
+<hr />
+<h2 id="project_structure">Project Structure<a class="headerlink" href="#project_structure" title="Permanent link">&para;</a></h2>
+<p><strong>The project follows a well-organized directory structure:</strong></p>
+<pre><code>root/
+    accounts -&gt; app
+    blog -&gt; app
+    crm -&gt; app
+    doc -&gt; app
+    evaluation -&gt; app
+    feedback -&gt; app
+    gfvp -&gt; project
+    gfvp_docs -&gt; mkdocs directory
+    glossary -&gt; app
+    guide -&gt; app
+    home -&gt; app
+    navigation -&gt; app
+    logs
+    static -&gt; static folder
+    upload -&gt; media folder
+    templates -&gt; templates for apps and project
+    .env
+    .gitignore
+    gfvp.dot
+    gfvp.png -&gt;database schema
+    manage.py -&gt;project manager
+    mkdocs.yml -&gt;mkdocs configuration
+    requirements.txt
+    robots.txt
+</code></pre>
+<p>Ensure that the necessary Python packages specified in <code>requirements.txt</code> are installed for the project to run successfully.</p>
+<hr />
+<h2 id="technology_stack">Technology Stack<a class="headerlink" href="#technology_stack" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Python 3.10</li>
+<li>Django 4.0.1</li>
+<li>ReportLab</li>
+<li>Panda</li>
+<li>Numpy</li>
+<li>xhtml2pdf</li>
+<li>Material Admin</li>
+<li>Bootstrap 5 with Volt theme</li>
+<li>Chartist.js</li>
+<li>AOS.js</li>
+<li>HTMX</li>
+<li>jQuery</li>
+<li>Font Awesome</li>
+<li>Youtube API</li>
+<li>IPinfo API</li>
+</ul>
+<h2 id="contributors">Contributors<a class="headerlink" href="#contributors" title="Permanent link">&para;</a></h2>
+<pre><code>1. Business logic and instructions provided by:
+    1. Krishna Hara Chakrabarti
+    2. Jessica Hofman
+2. Contributed to user guide
+    1. Pragya Chudal
+</code></pre>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Clone the repository to your local machine. <br />
+<code>git clone &lt;repository_url&gt;</code></p>
+</li>
+<li>
+<p>Create a virtual environment (optional but recommended).  <br />
+<code>python -m venv venv</code></p>
+</li>
+<li>
+<p>Activate the virtual environment.  </p>
+<p><code>// On Windows
+venv\Scripts\activate</code></p>
+<p><code>// On macOS and Linux
+source venv/bin/activate</code></p>
+</li>
+<li>
+<p>Install the required dependencies. 
+    <code>pip install -r requirements.txt</code></p>
+</li>
+<li>
+<p>Create a <code>.env</code> file in the project root and configure any environment-specific settings.</p>
+</li>
+<li>
+<p>Apply database migrations.<br />
+<code>python manage.py migrate</code></p>
+</li>
+<li>
+<p>Start the development server.<br />
+<code>python manage.py runserver</code></p>
+</li>
+</ul>
+<p>The application should now be accessible at http://localhost:8000/.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p><strong>Genarate .dot file and database schema</strong></p>
+<ul>
+<li>
+<p>First, make sure you have django-extensions installed. If it's not already in your <code>requirements.txt</code>, you can add it:</p>
+<p><code>django-extensions==3.2.1</code></p>
+</li>
+<li>
+<p>Then, run the following command to generate a graph_models.dot file:</p>
+<p><code>python manage.py graph_models -a -o gfvp.dot</code></p>
+</li>
+<li>
+<p>To generate a PNG image from the <code>.dot</code> file, you can use Graphviz. If you don't have Graphviz installed, you can add it to your <code>requirements.txt</code>:</p>
+<p><code>graphviz==0.17</code></p>
+</li>
+<li>
+<p>After installing Graphviz, you can use the dot command to convert the .dot file to a PNG image:</p>
+<p><code>dot -Tpng gfvp.dot -o gfvp.png</code></p>
+</li>
+</ul>
+<h2 id="mkdocs_commands">Mkdocs Commands<a class="headerlink" href="#mkdocs_commands" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Configure <code>mkdocs.yml</code>.</li>
+<li>Add <code>xxxx.md</code> in <code>gfvp_docs/docs</code></li>
+<li>run <code>mkdocs build</code> command to build the documentation site.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
+</ul>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p>Documentation for each app can be found in their respective <code>readme.md</code> files:</p>
+<ul>
+<li><a href="/docs/accounts.html">Accounts App</a></li>
+<li><a href="/docs/blog.html">Blog App</a></li>
+<li><a href="/docs/crm.html">CRM App</a></li>
+<li><a href="/docs/doc.html">Doc App</a></li>
+<li><a href="/docs/evaluation.html">Evaluation App</a></li>
+<li><a href="/docs/feedback.html">Feedback App</a></li>
+<li><a href="/docs/gfvp.html">GFVP Project</a></li>
+<li><a href="/docs/glossary.html">Glossary App</a></li>
+<li><a href="/docs/guide.html">Guide App</a></li>
+<li><a href="/docs/home.html">Home App</a></li>
+<li><a href="/docs/navigation.html">Navigation App</a></li>
+</ul>
+<p>Additional documentation for the project can be found in the code comments.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Copyright © 2023 Haradhan Sharma</p>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>(c) gf-vp.com</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-11-07 14:27:47.657840+00:00
+-->

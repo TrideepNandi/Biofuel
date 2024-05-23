@@ -1,0 +1,40 @@
+ 
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+ 
+  <title>
+    {{site_info.name}}-{% block title %}{% endblock %}
+  </title>
+  {% include "includes/meta.html" %}
+
+  <script src="{% static 'assets/vendor/htmx/dist/htmx.min.js' %}" type="text/javascript"></script>
+  <link type="text/css" href="{% static 'css/common.css' %}" rel="stylesheet">
+
+
+</head>
+{% endblock %}
+<body>
+
+  
+
+{% block main %}
+{% endblock %}
+
+{% block concent %}
+{% include 'gf_cookies/cookie_consent.html' %}
+{% endblock %}
+
+{% include 'includes/scripts.html' %}
+{% block javascripts %}
+
+{% endblock javascripts %}
+
+
+</body>
+</html>

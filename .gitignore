@@ -1,0 +1,62 @@
+*.pyc  
+*~  
+__pycache__  
+gfvp_env
+.vscode
+todo.txt
+evaluation_bkup  
+task doing for mash.txt 
+.DS_Store  
+# gfvp/settings.py
+# gfvp/sssssssettings.py
+static/assets/scss
+static/assets/gulpfile.js
+static/assets/package.json
+static/guide_image
+static/assets/node_modules
+static/assets/package-lock.json
+evaluation/bak_middleware_bk.py
+evaluation/middleware.cp39-win_amd64.pyd
+evaluation/middleware.cp310-win_amd64.pyd
+evaluation/bkup_middleware.cpython-39-x86_64-linux-gnu.so
+
+
+gfvp/bakup_addset.cpython-39-x86_64-linux-gnu.so
+# gfvp/addset.cp39-win_amd64.pyd
+# gfvp/addset.cp310-win_amd64.pyd
+gfvp/settings
+gfvp/bkup_addset.py
+for krishnahara.txt
+mail template.txt
+Presentation2.pptx
+genarel guide.txt
+features.txt
+Features.txt
+Logo new development.png
+
+templates/home/index_bkup.html
+logs/*
+logs
+
+graphical_data_advise_by_krishna.txt
+
+templates/evaluation/bkup_eva.html
+static/admin/css
+static/admin/fonts
+static/admin/img
+static/admin/js
+
+staticfiles
+
+static/ckeditor
+
+static/debug_toolbar
+
+static/django_extensions
+static/import_export
+static/jquery-autosuggest
+.env
+cache
+
+
+

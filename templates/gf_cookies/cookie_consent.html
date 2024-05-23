@@ -1,0 +1,46 @@
+<!-- Beta Information Modal -->
+
+<div class="modal fade" id="beta-info-modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="betaInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center mx-auto">
+          <h5 class="modal-title text-center text-danger" id="betaInfoModalLabel">GFVP BETA</h5>   
+        </div>
+        <div class="modal-body">
+          <!-- Your beta information content goes here -->
+          <p class="text-danger">Welcome to our beta release! Feel free to share suggestions or report issues via the 'Feedback' button. Your input is highly appreciated.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% if not request.COOKIES.cookie_consent %}
+<div class="modal fade " id="cookie-consent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="concentBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Coockie Consent</h5>    
+            </div>
+            <form method="post" action="{% url 'gf_cookies:cookie_consent' %}">
+                <div class="modal-body">                
+                    <p>We use cookies to improve your experience on our site. By using our site, you consent to our use of cookies.</p>
+                    <div> Please review our
+                    <a class="link-primary py-2 px-2" target="_blank" href="{% url 'term' %}"><small>Terms of Service</small> </a>
+                    and
+                    <a class="link-primary py-2 px-2" target="_blank" href="{% url 'gdpr' %}"><small>GDPR Policy</small> </a>
+                    </div>
+                    {% csrf_token %} 
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" name="consent" value="accept">Accept</button>           
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+
+
+

@@ -1,0 +1,234 @@
+{% autoescape off %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->
+	<!--[if !mso]><!-->
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+	<!--<![endif]-->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: inherit !important;
+		}
+
+		#MessageViewBody a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		p {
+			line-height: inherit
+		}
+
+		.desktop_hide,
+		.desktop_hide table {
+			mso-hide: all;
+			display: none;
+			max-height: 0px;
+			overflow: hidden;
+		}
+
+		@media (max-width:620px) {
+			.desktop_hide table.icons-inner {
+				display: inline-block !important;
+			}
+
+			.icons-inner {
+				text-align: center;
+			}
+
+			.icons-inner td {
+				margin: 0 auto;
+			}
+
+			.image_block img.big,
+			.row-content {
+				width: 100% !important;
+			}
+
+			.mobile_hide {
+				display: none;
+			}
+
+			.stack .column {
+				width: 100%;
+				display: block;
+			}
+
+			.mobile_hide {
+				min-height: 0;
+				max-height: 0;
+				max-width: 0;
+				overflow: hidden;
+				font-size: 0px;
+			}
+
+			.desktop_hide,
+			.desktop_hide table {
+				display: table !important;
+				max-height: none !important;
+			}
+
+			.row-1 .column-1 .block-4.heading_block h1,
+			.row-1 .column-1 .block-9.paragraph_block td.pad>div {
+				font-size: 24px !important;
+			}
+		}
+	</style>
+</head>
+
+<body style="background-color: transparent; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+	<table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: transparent;">
+		<tbody>
+			<tr>
+				<td>
+					<table class="row row-1" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f9f9f9; color: #000000; width: 600px;" width="600">
+										<tbody>
+											<tr>
+												<td class="column column-1" width="100%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-left: 10px; padding-right: 10px; vertical-align: top; padding-top: 5px; padding-bottom: 20px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;">
+													<table class="heading_block block-2" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="padding-top:70px;text-align:center;width:100%;">
+																<h1 style="margin: 0; color: #023b5c; direction: ltr; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; font-size: 30px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;">
+                                                                    <span class="tinyMce-placeholder">{{current_site.name|upper}}</span>
+                                                                </h1>
+															</td>
+														</tr>
+													</table>
+													<table class="divider_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="padding-bottom:20px;padding-left:10px;padding-right:10px;padding-top:20px;">
+																<div class="alignment" align="center">
+																	<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="20%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 3px solid #54E231;"><span>&#8202;</span></td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="heading_block block-4" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="text-align:center;width:100%;">
+																<h1 style="margin: 0; color: #023b5c; direction: ltr; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; font-size: 28px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;">
+                                                                    <span class="tinyMce-placeholder">Report {{pending.new_report.id}} Has Been Created<br></span></h1>
+															</td>
+														</tr>
+													</table>
+													<table class="image_block block-6" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:60px;">
+																<div class="alignment" align="center" style="line-height:10px">
+																	<img class="big" src="https://{{current_site.domain}}{% static report_mail_image.jpg %}" style="display: block; height: auto; border: 0; width: 580px; max-width: 100%;" width="580"></div>
+															</td>
+														</tr>
+													</table>
+													<table class="button_block block-7" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="padding-bottom:30px;padding-left:10px;padding-right:10px;padding-top:30px;text-align:center;">
+																<div class="alignment" align="center">
+																	<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="www.example.com" style="height:52px;width:283px;v-text-anchor:middle;" arcsize="8%" stroke="false" fillcolor="#023b5c"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#54e231; font-family:'Trebuchet MS', Tahoma, sans-serif; font-size:16px"><![endif]-->
+                                                                    <a href="https://{{current_site.domain}}/{{pending.from_report.get_absolute_url}}" 
+                                                                        target="_blank" 
+                                                                        style="text-decoration:none;display:inline-block;color:#54e231;background-color:#023b5c;border-radius:4px;width:auto;border-top:0px solid #8a3b8f;font-weight:400;border-right:0px solid #8a3b8f;border-bottom:0px solid #8a3b8f;border-left:0px solid #8a3b8f;padding-top:10px;padding-bottom:10px;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;">
+                                                                        <span style="padding-left:30px;padding-right:30px;font-size:16px;display:inline-block;letter-spacing:6px;">
+                                                                            <span dir="ltr" style="word-break: break-word; line-height: 32px;">VIEW OLD REPORT</span>
+                                                                        </span>
+                                                                    </a>
+																	<!--[if mso]></center></v:textbox></v:roundrect><![endif]-->
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="divider_block block-8" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="padding-bottom:35px;padding-left:10px;padding-right:10px;">
+																<div class="alignment" align="center">
+																	<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="20%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+																		<tr>
+																			<td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 3px solid #54E231;"><span>&#8202;</span></td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="paragraph_block block-9" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;">
+														<tr>
+															<td class="pad" style="padding-bottom:30px;">
+																<div style="color:#023b5c;direction:ltr;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:28px;font-weight:400;letter-spacing:0px;line-height:120%;text-align:left;mso-line-height-alt:33.6px;">
+																	<p style="margin: 0; margin-bottom: 16px;">Dear {{ pending.new_report.name }},</p>
+																	<p style="margin: 0; margin-bottom: 16px;">We have updated statement in our database. Based on your updated data we have created a new report #{{pending.new_report.id}} based on the previous report #{{pending.from_report.id}}. Please find the report #{{pending.new_report.id}} by clicking on the button below.</p>
+																	<p style="margin: 0;margin-bottom: 16px;">The report is accessible to you only. Please log in to the platform to view and download it.</p>
+																	<p style="margin: 0;">Thank you for using the <i> {{current_site.name}}</i>.</p>
+
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="button_block block-10" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="padding-bottom:30px;padding-left:10px;padding-right:10px;padding-top:30px;text-align:center;">
+																<div class="alignment" align="center">
+																	<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="www.example.com" style="height:52px;width:283px;v-text-anchor:middle;" arcsize="8%" stroke="false" fillcolor="#023b5c"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#54e231; font-family:'Trebuchet MS', Tahoma, sans-serif; font-size:16px"><![endif]-->
+                                                                        <a href="https://{{current_site.domain}}/{{pending.new_report.get_absolute_url}}" 
+                                                                        target="_blank" 
+                                                                        style="text-decoration:none;display:inline-block;color:#54e231;background-color:#023b5c;border-radius:4px;width:auto;border-top:0px solid #8a3b8f;font-weight:400;border-right:0px solid #8a3b8f;border-bottom:0px solid #8a3b8f;border-left:0px solid #8a3b8f;padding-top:10px;padding-bottom:10px;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;">
+                                                                        <span style="padding-left:30px;padding-right:30px;font-size:16px;display:inline-block;letter-spacing:6px;">
+                                                                            <span dir="ltr" style="word-break: break-word; line-height: 32px;">VIEW NEW REPORT</span>
+                                                                        </span>
+                                                                    </a>
+																	<!--[if mso]></center></v:textbox></v:roundrect><![endif]-->
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="heading_block block-12" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+														<tr>
+															<td class="pad" style="text-align:center;width:100%;padding-top:90px;">
+																<h1 style="margin: 0; color: #023b5c; direction: ltr; font-family: Lato, Tahoma, Verdana, Segoe, sans-serif; font-size: 28px; font-weight: 700; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;">
+                                                                    <span class="tinyMce-placeholder">https://{{ current_site.domain }}</span>
+                                                                </h1>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table><!-- End -->
+</body>
+
+</html>
+
+{% endautoescape %}

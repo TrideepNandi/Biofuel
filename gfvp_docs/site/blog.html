@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Haradhan Sharma">
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Blog - GFVP Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">GFVP Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="accounts.html" class="nav-link">Accounts</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="crm.html" class="nav-link">CRM</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="doc.html" class="nav-link">Doc</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="evaluation.html" class="nav-link">Evaluation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="feedback.html" class="nav-link">Feedback</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="gfvp.html" class="nav-link">Project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="glossary.html" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="guide.html" class="nav-link">User Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="home.html" class="nav-link">Home And Dash</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="navigation.html" class="nav-link">Navigation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="cookies.html" class="nav-link">GF Cookies</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="accounts.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="crm.html" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/haradhansharma/biofuel/blob/v24123/gfvp_docs/docs/blog.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#gfvp_blog_app" class="nav-link">GFVP Blog App</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#models" class="nav-link">Models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#signals" class="nav-link">Signals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#url_patterns" class="nav-link">URL Patterns</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#view_post_list" class="nav-link">View: post_list</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#view_post_detail" class="nav-link">View: post_detail</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#contributions" class="nav-link">Contributions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#credits" class="nav-link">Credits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="gfvp_blog_app">GFVP Blog App<a class="headerlink" href="#gfvp_blog_app" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The GFVP Blog App is a simple yet powerful application that provides the foundation for creating and managing blog posts. This app allows you to easily create, edit, publish, and manage blog posts, while also providing a user-friendly interface for the admin panel.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>To use the Django Blog App in your project, follow these steps:</p>
+<ol>
+<li>Install the app using pip:</li>
+</ol>
+<pre><code>pip install blog
+</code></pre>
+<ol>
+<li>Add <code>'blog'</code> to the <code>INSTALLED_APPS</code> list in your project's <code>settings.py</code>:</li>
+</ol>
+<pre><code class="language-python">INSTALLED_APPS = [
+   # ...
+   'blog',
+   # ...
+]
+</code></pre>
+<ol>
+<li>Include the app's URLs in your project's <code>urls.py</code>:</li>
+</ol>
+<pre><code class="language-python">
+from django.urls import path, include
+
+urlpatterns = [
+   # ...
+   path('blog/', include('blog.urls')),
+   # ...
+]
+</code></pre>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p><strong>Admin Panel:</strong></p>
+<p>The Django Blog App provides an admin panel interface to manage blog posts easily. You can access the admin panel at <code>/admin/</code>.</p>
+<p>In the admin panel, you can:</p>
+<ul>
+<li>Create, edit, and delete blog posts.</li>
+<li>Use the Summernote rich text editor to compose blog post content.</li>
+<li>Manage tags and categories associated with blog posts.</li>
+<li>Publish or draft blog posts.</li>
+<li>Filter and search for blog posts.</li>
+</ul>
+<p><strong>Customization:</strong></p>
+<p>The app is designed to be easily customizable to fit your project's specific needs. You can extend the <code>BlogPost</code> model or modify its behavior by creating your own customizations.</p>
+<p>For more information on how to customize and extend the app, refer to the official documentation.</p>
+<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<p>The Django Blog App includes two main models to manage blog posts and track actions on various objects.</p>
+<p><strong>Action Model:</strong></p>
+<p>The <code>Action</code> model tracks different actions performed on various objects. It's a generic model that can be used to record actions like views and likes on different content types. The key attributes of this model are:</p>
+<ul>
+<li><code>content_type</code>: A ForeignKey to the ContentType model, representing the type of the content object.</li>
+<li><code>object_id</code>: A PositiveIntegerField representing the ID of the content object.</li>
+<li><code>content_object</code>: A GenericForeignKey that allows you to link to any object using the <code>content_type</code> and <code>object_id</code>.</li>
+<li><code>user</code>: A ForeignKey to the user who performed the action (if authenticated), or <code>None</code> for anonymous users.</li>
+<li><code>ip_address</code>: A GenericIPAddressField to store the IP address of the user performing the action.</li>
+<li><code>action_type</code>: A CharField to store the type of action, such as 'view' or 'like'.</li>
+<li><code>timestamp</code>: A DateTimeField representing the time the action was recorded.</li>
+</ul>
+<p>This model is designed to be versatile and can be easily extended to track other types of actions as well.</p>
+<p><strong>BlogPost Model:</strong></p>
+<p>The <code>BlogPost</code> model represents a blog post within the application. It includes fields to store information about the post's title, content, author, publishing status, and more. The main attributes of this model are:</p>
+<ul>
+<li><code>title</code>: A CharField representing the title of the blog post.</li>
+<li><code>image</code>: An ImageField to store the featured image of the post.</li>
+<li><code>slug</code>: A SlugField to generate and store a URL-friendly slug for the post's URL.</li>
+<li><code>author</code>: A ForeignKey to the user who authored the post.</li>
+<li><code>body</code>: A TextField to store the content of the blog post.</li>
+<li><code>publish</code>: A DateTimeField indicating the publication date and time of the post.</li>
+<li><code>created</code>: A DateTimeField representing the creation date of the post.</li>
+<li><code>updated</code>: A DateTimeField indicating the last update time of the post.</li>
+<li><code>status</code>: A CharField indicating the publishing status of the post (draft or published).</li>
+<li><code>tags</code>: A TaggableManager that allows you to associate tags with the post.</li>
+<li><code>actions</code>: A GenericRelation to the <code>Action</code> model, enabling tracking of actions related to this post.</li>
+</ul>
+<p>Additionally, the <code>BlogPost</code> model includes custom methods to calculate the total number of views and record new views. The model also features a custom manager, <code>PublishedManager</code>, to retrieve only published posts.</p>
+<p>This combination of models provides a powerful foundation for creating and managing blog posts with customizable features and actions tracking.</p>
+<h2 id="signals">Signals<a class="headerlink" href="#signals" title="Permanent link">&para;</a></h2>
+<p>The Django Blog App uses signals to automate certain actions and tasks related to blog posts. Signals allow the app to respond to events like creating, updating, or deleting a blog post, and perform additional actions as needed.</p>
+<p><strong>send_to_mail_queue Signal:</strong></p>
+<p>The <code>send_to_mail_queue</code> signal handler is triggered after a <code>BlogPost</code> instance is saved. This signal is responsible for creating or updating <code>BlogMailQueue</code> entries based on the status and changes to the blog post. The key functionality includes:</p>
+<ul>
+<li>When a new <code>BlogPost</code> is created and its status is 'published', a <code>BlogMailQueue</code> entry will be created for each subscribed lead.</li>
+<li>If a <code>BlogPost</code> is updated and its status is changed to 'draft', any unprocessed <code>BlogMailQueue</code> entries related to that post will be deleted.</li>
+<li>If the status of an updated <code>BlogPost</code> is changed to 'published' and there are no existing <code>BlogMailQueue</code> entries, new entries will be created for each subscribed lead.</li>
+</ul>
+<p><strong>delete_mail_queues Signal:</strong></p>
+<p>The <code>delete_mail_queues</code> signal handler is triggered after a <code>BlogPost</code> instance is deleted. This signal is responsible for deleting any unprocessed <code>BlogMailQueue</code> entries related to the deleted blog post.</p>
+<p>To ensure these signals work correctly, the following components must be present:</p>
+<ul>
+<li>Import the necessary models at the beginning of the <code>signal.py</code> file.</li>
+<li>Set up appropriate logging to track the actions of the signals.</li>
+</ul>
+<p>Please note that signals can greatly enhance the automation and logic within your app, but it's important to use them judiciously and ensure they're thoroughly tested to avoid unintended consequences.</p>
+<p>For more information on how signals work in Django and how to handle them effectively, refer to the official Django documentation on signals.</p>
+<h2 id="url_patterns">URL Patterns<a class="headerlink" href="#url_patterns" title="Permanent link">&para;</a></h2>
+<p>The Django Blog App uses URL patterns to define how different URLs should be handled and routed to specific views. URL patterns play a crucial role in determining how users can access various parts of your application.</p>
+<p><strong>URL Configuration:</strong></p>
+<p>In the <code>urls.py</code> file of the <code>blog</code> app, you will find a list of URL patterns defined using the <code>path</code> function. Each pattern consists of a URL route and a corresponding view function. The <code>app_name</code> is set to 'blog' to create a namespace for these URL patterns.</p>
+<p><strong>URL Patterns Explained:</strong></p>
+<ol>
+<li><code>blog/</code>:</li>
+<li>URL Route: <code>blog/</code></li>
+<li>View Function: <code>views.post_list</code></li>
+<li>Name: <code>post_list</code></li>
+<li>
+<p>Description: This URL pattern maps to the <code>post_list</code> view, which displays a list of all blog posts.</p>
+</li>
+<li>
+<p><code>blog/&lt;slug:post&gt;/</code>:</p>
+</li>
+<li>URL Route: <code>blog/&lt;slug:post&gt;/</code></li>
+<li>View Function: <code>views.post_detail</code></li>
+<li>Name: <code>post_detail</code></li>
+<li>
+<p>Description: This URL pattern includes a slug parameter, which is used to identify a specific blog post. It maps to the <code>post_detail</code> view, showing the detailed view of the selected blog post.</p>
+</li>
+<li>
+<p><code>blog/tag/&lt;slug:tag_slug&gt;/</code>:</p>
+</li>
+<li>URL Route: <code>blog/tag/&lt;slug:tag_slug&gt;/</code></li>
+<li>View Function: <code>views.post_list</code></li>
+<li>Name: <code>post_tag</code></li>
+<li>Description: This URL pattern includes a slug parameter (<code>tag_slug</code>), allowing users to view blog posts filtered by a specific tag. It maps to the <code>post_list</code> view, displaying posts associated with the selected tag.</li>
+</ol>
+<p><strong>Namespace and Reversing:</strong></p>
+<p>The <code>app_name</code> is set to 'blog', creating a namespace for these URL patterns. This namespace helps avoid naming conflicts and makes it easier to reverse URLs in templates and code using the <code>app_name:pattern_name</code> syntax.</p>
+<p>For example, to generate the URL for the <code>post_detail</code> view for a blog post with the slug 'my-blog-post', you can use <code>{% url 'blog:post_detail' post='my-blog-post' %}</code> in templates or <code>reverse('blog:post_detail', args=['my-blog-post'])</code> in Python code.</p>
+<p>Understanding and utilizing these URL patterns is crucial for ensuring smooth navigation and interaction within the Django Blog App.</p>
+<p>For more information on Django URL routing and reversing, refer to the official Django documentation on URL dispatch and URL reversing.</p>
+<h2 id="view_post_list">View: post_list<a class="headerlink" href="#view_post_list" title="Permanent link">&para;</a></h2>
+<p>The <code>post_list</code> view function is responsible for displaying a list of blog posts on the website. This view supports various scenarios, such as showing all published posts, filtering posts by a specific tag, and providing search functionality.</p>
+<h3 id="view_details">View Details<a class="headerlink" href="#view_details" title="Permanent link">&para;</a></h3>
+<p><strong>Function Signature:</strong></p>
+<pre><code class="language-python">def post_list(request, tag_slug=None):
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>request</code> (:class:<code>~django.http.request.HttpRequest</code>): The HTTP request object.
+- <code>tag_slug</code> (:class:<code>~str</code>, optional): An optional tag slug to filter posts by a specific tag.</p>
+<p><strong>Functionality:</strong>
+- This view handles the display of blog posts and supports filtering by tag and searching by query.
+- It constructs a context for rendering the template, including the list of blog posts and other necessary data.
+- If a <code>tag_slug</code> is provided in the URL, it filters posts tagged with the specified tag.
+- If a search query (<code>q</code>) is present in the GET parameters, it filters posts based on the search query using Q objects for more advanced searches.
+- The resulting list of posts is ordered by their update date and supports pagination.</p>
+<p><strong>Stored Search Query:</strong>
+If a search query is provided, the view stores it in the user's session to pre-fill the search box when displaying the search results. The stored query is cleared from the session if there is no active search.</p>
+<p><strong>Meta Information:</strong>
+The view also sets up meta information for the page, such as title, description, tags, and robot indexing instructions.</p>
+<h3 id="usage_examples">Usage Examples<a class="headerlink" href="#usage_examples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>To display all published blog posts, access the URL: <code>/blog/</code></li>
+<li>To view posts with a specific tag, access the URL: <code>/blog/tag/tag-slug/</code></li>
+<li>To search for specific terms within blog posts, add a search query to the URL: <code>/blog/?q=search-term</code></li>
+</ul>
+<p>This view plays a central role in providing users with a curated list of blog posts and facilitates easy navigation and discovery.</p>
+<p>For more information on how this view is utilized within the application and its interaction with templates, please refer to the comments and docstrings within the source code.</p>
+<h2 id="view_post_detail">View: post_detail<a class="headerlink" href="#view_post_detail" title="Permanent link">&para;</a></h2>
+<p>The <code>post_detail</code> view function is responsible for displaying a detailed view of a specific blog post on the website. This view provides users with comprehensive information about a single blog post, including related posts and meta information.</p>
+<h3 id="view_details_1">View Details<a class="headerlink" href="#view_details_1" title="Permanent link">&para;</a></h3>
+<p><strong>Function Signature:</strong></p>
+<p>.. code-block:: python</p>
+<pre><code> def post_detail(request, post):
+</code></pre>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>request</code> (:class:<code>~django.http.request.HttpRequest</code>): The HTTP request object.</li>
+<li><code>post</code> (:class:<code>~str</code>): The slug of the specific blog post to display.</li>
+</ul>
+<p><strong>Functionality:</strong></p>
+<ul>
+<li>This view handles the detailed display of a specific blog post.</li>
+<li>It clears any stored search term in the session to ensure a clean user experience.</li>
+<li>If a search query (<code>q</code>) is present in the GET parameters, it stores the query in the session and redirects to the <code>post_list</code> view to display search results.</li>
+<li>The view retrieves the specific published blog post based on the provided slug.</li>
+<li>It records the view action for the blog post using the <code>post.view()</code> method.</li>
+<li>The view fetches similar posts based on shared tags, excluding the current post. These similar posts are ordered by tag similarity and publishing date.</li>
+<li>The view constructs a context for rendering the template, including the detailed blog post and related/similar posts.</li>
+</ul>
+<p><strong>Meta Information:</strong></p>
+<p>The view sets up meta information for the page, including title, description, tags, and robot indexing instructions. It also sets an Open Graph (og) image for social media sharing.</p>
+<h3 id="usage_examples_1">Usage Examples<a class="headerlink" href="#usage_examples_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>To view the details of a specific blog post, access the URL: <code>/blog/my-blog-post/</code></li>
+</ul>
+<p>The <code>post_detail</code> view provides users with a rich and engaging experience to explore the content of individual blog posts and discover related content.</p>
+<p>For more insights into how this view interacts with templates and how its features are utilized within the application, refer to the comments and docstrings within the source code.</p>
+<h2 id="contributions">Contributions<a class="headerlink" href="#contributions" title="Permanent link">&para;</a></h2>
+<p>Contributions to enhance or expand this custom Django admin configuration are welcome. Feel free to submit pull requests with improvements, bug fixes, or additional features.</p>
+<h2 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h2>
+<p>This app is developed by <a href="https://github.com/haradhansharma">Haradhan Sharma</a>.</p>
+<p>For more information, visit the <a href="https://www.gf-vp.com">GF-VP website</a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>(c) gf-vp.com</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

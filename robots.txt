@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /static/
+Disallow: /private/
+Disallow: /junk/
+Disallow: /admin/
+
+
+Crawl-delay: 10
+
+
+Sitemap: https://www.gf-vp.com/sitemap.xml

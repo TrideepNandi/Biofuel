@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Haradhan Sharma">
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Project - GFVP Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">GFVP Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="accounts.html" class="nav-link">Accounts</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="crm.html" class="nav-link">CRM</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="doc.html" class="nav-link">Doc</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="evaluation.html" class="nav-link">Evaluation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="feedback.html" class="nav-link">Feedback</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="gfvp.html" class="nav-link">Project</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="glossary.html" class="nav-link">Glossary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="guide.html" class="nav-link">User Guide</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="home.html" class="nav-link">Home And Dash</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="navigation.html" class="nav-link">Navigation</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="cookies.html" class="nav-link">GF Cookies</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="feedback.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="glossary.html" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/haradhansharma/biofuel/blob/v24123/gfvp_docs/docs/gfvp.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#django_project_gfvp_green_fuel_validation_platform" class="nav-link">Django Project: GFVP (Green Fuel Validation Platform)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#project_structure" class="nav-link">Project Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#getting_started" class="nav-link">Getting Started</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#project_features" class="nav-link">Project Features</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deployment" class="nav-link">Deployment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#contributions" class="nav-link">Contributions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#credits" class="nav-link">Credits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="django_project_gfvp_green_fuel_validation_platform">Django Project: GFVP (Green Fuel Validation Platform)<a class="headerlink" href="#django_project_gfvp_green_fuel_validation_platform" title="Permanent link">&para;</a></h1>
+<h2 id="project_structure">Project Structure<a class="headerlink" href="#project_structure" title="Permanent link">&para;</a></h2>
+<p>The 'gfvp' project has the following directory structure:</p>
+<pre><code>gfvp/
+├── __init__.py
+├── settings/
+│   ├── __init__.py
+│   ├── dev.py
+│   ├── pro.py
+│   ├── settings_axes.py
+│   ├── settings_database.py
+│   ├── settings_debug_toolbar.py
+│   ├── settings_email.py
+│   ├── settings_local.py
+│   ├── settings_logs.py
+│   ├── settings_maintenance.py
+│   ├── settings_material_admin.py
+│   ├── settings_mkdocs.py
+│   ├── settings_security.py
+│   ├── settings_summernote.py
+├── addset.cpython-39-x86_64-linux-gnu.so
+├── addset.cp39-win_amd64.pyd
+├── urls.py
+├── wsgi.py
+└── asgi.py
+</code></pre>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>GFVP (Green Fuel Validation Platform) is a Django-based web application for managing and verifying green fuel data. It includes various features and modules for fuel evaluation, user management, content management, and more.</p>
+<h2 id="getting_started">Getting Started<a class="headerlink" href="#getting_started" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Install Dependencies:</li>
+<li>Make sure you have Python 3.9 or higher installed.</li>
+<li>Create a virtual environment and activate it.</li>
+<li>
+<p>Install required Python packages using <code>pip install -r requirements.txt</code>.</p>
+</li>
+<li>
+<p>Configure Settings:</p>
+</li>
+<li>Customize the project settings in the 'gfvp/settings' directory based on your environment (e.g., development or production).</li>
+<li>Review 'gfvp/settings/settings_material_admin.py' for Material Admin configuration.</li>
+<li>
+<p>Review <code>CustomFileBasedCache</code> in project <code>__init__.py</code></p>
+</li>
+<li>
+<p>Database Setup:</p>
+</li>
+<li>Configure your database settings in 'gfvp/settings/settings_database.py'.</li>
+<li>
+<p>Run migrations using <code>python manage.py migrate</code> to create the database schema.</p>
+</li>
+<li>
+<p>Serve the Application:</p>
+</li>
+<li>Start the development server with <code>python manage.py runserver</code>.</li>
+</ol>
+<h2 id="project_features">Project Features<a class="headerlink" href="#project_features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Admin Panel:</li>
+<li>Access the admin panel at '/admin/' with customizable branding.</li>
+<li>
+<p>Manage various entities and settings.</p>
+</li>
+<li>
+<p>Debugging:</p>
+</li>
+<li>
+<p>Enable debugging using the Django Debug Toolbar at '/<strong>debug</strong>/'.</p>
+</li>
+<li>
+<p>Additional Modules:</p>
+</li>
+<li>
+<p>Utilize various app modules like 'evaluation', 'home', 'crm', 'guide', 'blog', 'glossary', 'feedback', and more.</p>
+</li>
+<li>
+<p>User Management:</p>
+</li>
+<li>Handle user registration types with the 'null_session' view.</li>
+<li>
+<p>Authentication and account-related URLs are available under '/accounts/'.</p>
+</li>
+<li>
+<p>WYSIWYG Editor:</p>
+</li>
+<li>
+<p>Integrate the Summernote WYSIWYG editor with '/summernote/'.</p>
+</li>
+<li>
+<p>Taggit Autosuggest:</p>
+</li>
+<li>
+<p>Use the '/taggit_autosuggest/' URL for tag suggestions.</p>
+</li>
+<li>
+<p>Documentation:</p>
+</li>
+<li>Include documentation using MkDocs at '/docs/'.</li>
+<li>
+<p>Documetation for eacch app added in each app directory.</p>
+</li>
+<li>
+<p>Additional Views:</p>
+</li>
+<li>View GDPR policy at '/gdpr-policy/'.</li>
+<li>View terms and conditions at '/terms/'.</li>
+</ul>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Configure your server for deployment.</li>
+<li>Set up environment variables and server-specific configurations.</li>
+<li>Use 'wsgi.py' (for non-Windows systems) or 'asgi.py' (for ASGI deployment) as your application entry point.</li>
+<li>Ensure proper permissions for cache and static/media files as required.</li>
+</ul>
+<h2 id="contributions">Contributions<a class="headerlink" href="#contributions" title="Permanent link">&para;</a></h2>
+<p>Contributions to enhance or expand this custom Django admin configuration are welcome. Feel free to submit pull requests with improvements, bug fixes, or additional features.</p>
+<h2 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h2>
+<p>This app is developed by <a href="https://github.com/haradhansharma">Haradhan Sharma</a>.</p>
+<p>For more information, visit the <a href="https://www.gf-vp.com">GF-VP website</a>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>(c) gf-vp.com</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

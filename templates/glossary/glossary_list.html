@@ -1,0 +1,98 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% load static %}
+
+{% block title %} {{site_info.title}} {% endblock %}
+
+{% block stylesheets %}
+
+<style type="text/css">
+    .fixed-top {
+        top: -40px;
+        transform: translateY(40px);
+        transition: transform .3s;
+    }
+</style>
+
+{% endblock stylesheets %}
+
+{% block js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener('scroll', function () {
+            ele = document.getElementById('grosary-nav');
+            if (window.scrollY > 200) {
+                document.getElementById('he').classList.add('d-none');
+                document.getElementById('nin').classList.remove('d-none');
+                ele.classList.add('fixed-top', 'bgjessica-light-primary', 'justify-content-start', 'align-items-start', 'px-5', 'shadow-sm', 'navbar', 'flex-column');
+                // add padding top to show content behind navbar
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                ele.classList.remove('fixed-top', 'bgjessica-light-primary', 'justify-content-start', 'align-items-start', 'px-5', 'shadow-sm', 'navbar', 'flex-column');
+                document.getElementById('he').classList.remove('d-none');
+                document.getElementById('nin').classList.add('d-none');
+                // remove padding top from body
+                document.body.style.paddingTop = '0';
+            }
+        });
+    });
+      // DOMContentLoaded  end
+</script>
+
+
+{% endblock js %}
+
+{% load custom_tags %}
+
+{% block content %}
+
+{% block header %}
+<div id="he" class="">
+    {% include 'includes/g_header.html' %}
+</div>
+{% endblock %}
+<main id="indi">
+    {% include "includes/hero_section_glossary.html" %}
+    <div class="section pt-6 bgjessica-light">
+        <div class="container-fluid mt-n10 mt-lg-n12 z-2">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row d-flex justify-content-center ">
+                        <div class="col-md-8 align-items-start jsutify-content-start">
+                            {% include "glossary/glossary_template.html" %}
+                            <form id="rform" method="post" action="" class="p-3 card bg-warning mt-3">
+                                {% csrf_token %}
+                                <div class="form-floating mb-3">
+                                    {{ request_form.title }}
+                                    <label class="text-primary" for="{{ request_form.title.id_for_label }}">
+                                        {{ request_form.title.label }} 
+                                        <span class="text-danger">
+                                            {% if request_form.title.field.required %}*{% endif %}
+                                        </span> 
+                                    </label>
+                                    <span class="text-start text-danger">
+                                        {{ form.title.errors }}
+                                    </span>
+                                </div>
+                                {{ request_form.captcha }}
+                                <span class="text-start text-danger">{{ form.captcha.errors }}</span>
+                                <button type="submit" id="btn_ini" class="btn btn-success btn-block">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-md-4 align-items-start jsutify-content-start">
+                            <div class="card p-2 justify-content-center align-items-center" style="min-height: 10vh;">
+                                Total {{object_list.count}} items has been added!                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% include "includes/g_footer.html" %}
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

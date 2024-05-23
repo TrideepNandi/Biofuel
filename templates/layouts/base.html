@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html> 
+<html lang="en">
+
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+  <title>
+    {{site_info.name}}-{% block title %}{% endblock %} 
+  </title>
+
+  {% include "includes/meta.html" %}
+
+  <script src="{% static 'assets/vendor/htmx/dist/htmx.min.js' %}" type="text/javascript"></script>
+  <link type="text/css" href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css"> 
+
+   
+  {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+<body>
+  {% include 'feedback/floating.html' %}
+
+    {% include 'includes/sidebar.html' %}
+    
+    <main class="content" id = "pppp">
+      {% include 'includes/navigation.html' %}
+
+      {% block content %} 
+      {% include 'gf_cookies/cookie_consent.html' %}
+      {% endblock %}
+
+      {% include 'includes/settings-box.html' %}
+
+      {% include 'includes/footer.html' %}
+
+      
+
+    </main>
+
+  {% include 'includes/scripts.html' %}
+    
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}  
+      
+</body>
+</html>

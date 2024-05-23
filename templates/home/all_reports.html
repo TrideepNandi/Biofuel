@@ -1,0 +1,95 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}{{site_info.title}}{% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="card border-0 shadow table-wrapper table-responsive">
+    <div class="card-header">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+            <div class="d-block mb-4 mb-md-0">
+                <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                </nav>
+                <h1 class="h4">Your all evaluation report for your biofuel</h1>              
+            </div>
+            <div class="btn-toolbar mb-2 mb-md-0">
+            </div>
+        </div>
+
+    </div> 
+    <div class="card-body">
+        <div class="table-responsive">
+            {% if allreports %}
+            <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="border-bottom" scope="col">#Report</th>
+                        <th class="border-bottom" scope="col">Bio Fuel</th>
+                        <th class="border-bottom" scope="col">Orgonization</th>
+                        <th class="border-bottom" scope="col">Answered</th>
+                        <th class="border-bottom" scope="col">Positive</th>
+                        <th class="border-bottom" scope="col">Don't Know</th>
+                        <th class="border-bottom" scope="col">Don't Know %</th>
+                        <th class="border-bottom" scope="col">Positive %</th>
+                        <th class="border-bottom" scope="col">Action %</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for allreport in allreports %}
+                    <tr>
+                        <td class="text-gray-900" scope="row">#
+                            <a href="{% url 'evaluation:nreport'  allreport.g_report.report.slug %}" target="_blank">{{ allreport.g_report.report.id }}</a>
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            {{ allreport.g_report.report.biofuel }}
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            {{ allreport.g_report.report.orgonization }}
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            #{{ allreport.g_report_result.answered_questiones }}
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            #{{ allreport.g_report_result.positive_ans }}
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            #{{ allreport.g_report_result.dont_know_ans }}
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            {{ allreport.g_report_result.dont_know_percent }}
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            {{ allreport.g_report_result.positive_percent }}
+                        </td>
+                        <td class="fw-bolder text-gray-500">
+                            {% if request.user == allreport.creator or request.user.is_superuser %}
+                            <a class="btn btn-warning" href="{% url 'evaluation:edit_report'  allreport.g_report.report.slug %}">Edit</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}                    
+                </tbody>
+            </table>
+            {% else %}
+            <div class="alert alert-primary m-4" role="alert">
+                No report found to display!
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if allreports %}
+    <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between">
+        {% include "includes/pagination.html" with page=allreports %}
+    </div>
+    {% endif %}
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

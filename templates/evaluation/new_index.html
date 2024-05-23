@@ -1,0 +1,134 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+
+{% block title %}{{site_info.title}}{% endblock %}
+{% block stylesheets %}
+
+<style>
+    .oilindicator {
+    display:none!important;
+    }
+    .htmx-request .oilindicator {
+    display:inline!important;
+    }
+    .htmx-request.oilindicator {
+    display:inline!important;
+    }
+          
+</style>
+
+{% endblock stylesheets %}
+{% load custom_tags %}
+{% block content %}
+{% block header %}
+{% include 'includes/g_header.html' %}
+{% endblock %}
+<main id="indi">
+    
+{% include "includes/hero_section.html" %}
+
+    <div class="section pt-6 bgjessica-light">
+        <div class="container mt-n10 mt-lg-n12 z-2">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    
+                    <div class="row d-flex justify-content-center ">
+                        <div class="col-md-6 align-items-center ">
+                            <div class="card p-3">
+                                <!--
+                                <h1 class="h6 border-bottom border-danger">{{site_info.title}}</h1>
+                                -->
+                                <h1 class="h6 border-bottom border-danger">Please Fill Out:</h1>
+
+                                <form method="POST">
+                                    {% csrf_token %}
+                              
+                                    <div class="form-floating mb-3">
+                                        {{ form.name }}
+                                        <label class="text-primary" for="{{ form.name.id_for_label }}">{{ form.name.label }} <span class="text-danger">{% if form.name.field.required %}*{% endif %}</span> </label>
+                                        <span class="text-start text-danger">{{ form.name.errors }}</span>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        {{ form.email }}
+                                        <label class="text-primary" for="{{ form.email.id_for_label }}">{{ form.email.label }}<span class="text-danger">{% if form.email.field.required %}*{% endif %}</span> </label>
+                                        <span class="text-start text-danger">{{ form.email.errors }}</span>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        {{ form.orgonization }}
+                                        <label class="text-primary" for="{{ form.orgonization.id_for_label }}">{{ form.orgonization.label }}<span class="text-danger">{% if form.orgonization.field.required %}*{% endif %}</span> </label>
+                                        <span class="text-start text-danger">{{ form.orgonization.errors }}</span>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        {{ form.phone }}
+                                        <label class="text-primary" for="{{ form.phone.id_for_label }}">{{ form.phone.label }}<span class="text-danger">{% if form.phone.field.required %}*{% endif %}</span> </label>
+                                        <span class="text-start text-danger">{{ form.phone.errors }}</span>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        {{ form.biofuel }}
+                                        <label class="text-primary" for="{{ form.biofuel.id_for_label }}">{{ form.biofuel.label }}<span class="text-danger">*</span> </label>
+                                        <span class="text-start text-danger">{{ form.biofuel.errors }}</span>
+                                    </div>
+
+                                    <div class="form-check mb-3">
+                                        {{ form.make_it_public }}
+                                        <label class="text-primary" for="{{ form.make_it_public.id_for_label }}">{{ form.make_it_public.label }}<span class="text-danger">*</span> </label>
+                                        <span class="text-start text-danger">{{ form.make_it_public.errors }}</span>
+                                    </div>
+
+                               
+
+
+                                    <!--
+                                    <div class="oilindicator text-danger">Loading.....</div><br>
+                                    <div class="form-floating mb-3">
+                                        <select aria-label="stdoil" class="form-select mb-4" id="stdoil" name="stdoil">                                            
+                                            {% for sol in stdoil_list %}                                          
+                                            <option value="{{ sol.id }}">{{ sol.select_oil.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <label class="text-primary" for="stdoil">Related Fuel Grade</label>                                        
+                                    </div>
+                                    -->
+                                    
+                                                   
+
+                                        
+                                     
+                                   
+
+                                    <div class="btn btn-success mt-3">Disclaimer: The information provided by the Green Fuel Validation Platform and its partners is for 
+                                        general informational purposes only. While we strive to provide accurate and up-to-date information, we make no representations or 
+                                        warranties of any kind, express or implied. Any reliance you place on such information is strictly at your own risk. We cannot be 
+                                        held responsible for any damages arising from using the information provided. By using our services, you acknowledge and agree to 
+                                        the terms of this disclaimer.</div>
+
+                                    <div class="btn btn-info mt-3 mb-3">
+                                        {{ box_timing }}
+                                    </div>
+
+
+                                    <button type="submit" id="btn_ini" class="btn btn-success btn-block">Submit</button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>    
+            </div>
+        </div>
+    </div>
+
+
+</main>
+{% include "includes/g_footer.html" %}
+{% endblock content %}
+
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

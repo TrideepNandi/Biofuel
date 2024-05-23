@@ -1,0 +1,82 @@
+
+<form id="ques_sug_form" hx-post="{% url 'home:add_new_service' visiting_user.id %}" hx-target="#serviccelist" hx-swap="innerHTML">
+    {% csrf_token %}
+    <div class="row"> 
+        <div class="col-12 mb-3">
+            <div class="form-group mb-4">
+                <div class="row">
+                    <div class="p-2 col-sm-12">
+
+                        {{ form.name_and_standared }}<br>
+                        {{ form.name_and_standared.errors }}
+                    </div>
+                    <div class="p-2 col-sm-912">
+                        {{ form.short_description }}<br>
+                        {{ form.short_description.errors }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="p-2 col-12">
+                        {{ form.descriptions }}<br>
+                        {{ form.descriptions.errors }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="p-2 col-12">
+                        {{ form.url }}<br>
+                        {{ form.url.errors }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="p-2 col-12">                      
+                        {{ form.priority }}
+                        {{ form.priority.errors }}
+                        {{ form.related_percent }}
+                        {{ form.compulsory_percent }}
+
+                        
+                    </div>
+                    
+                </div>
+
+                
+
+                <div class="row">
+                    <div class="p-2 col-12">
+                        {{ form.compulsory_questions.label_tag }}
+                        {% if form.priority.help_text %}
+                        <p class="form-text">{{ form.compulsory_questions.help_text|safe }}</p>
+                        {% endif %}
+                        {{ form.compulsory_questions }}<br>
+                        {{ form.compulsory_questions.errors }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="p-2 col-12">
+                        {{ form.related_questions.label_tag }}
+                        {% if form.priority.help_text %}
+                        <p class="form-text">{{ form.related_questions.help_text|safe }}</p>
+                        {% endif %}
+                        {{ form.related_questions }}<br>
+                        {{ form.related_questions.errors }}
+                    </div>
+                </div>
+                
+              
+                
+
+                <button class="btn btn-primary">Submite to Review</button>
+                <!--
+                <a class="btn btn-warning" hx-get="{% url 'home:get_new_sugestion_list' %}" hx-target="#new_sug_list"
+                    hx-swap="innerHTML">View all</a>
+                -->
+
+            </div>
+        </div>
+    </div>
+
+</form>
+

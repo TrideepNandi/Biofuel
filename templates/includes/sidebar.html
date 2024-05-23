@@ -1,0 +1,75 @@
+       {% load static %}       
+       <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+            <a class="navbar-brand me-lg-5" href="/">
+              <img src="{{ site_info.logo }}" loading="lazy" class="card bgjessica-primary"  height="50px" width="auto" alt="{{ site_info.name }}" title="{{ site_info.name }}">                
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>         
+
+        <nav id="sidebarMenu" class="sidebar d-lg-block bgjessica-primary text-white collapse" data-simplebar>          
+          <div class="sidebar-inner px-2 pt-3">
+            <div class="user-card d-flex d-lg-none align-items-center justify-content-between justify-content-lg-center pb-4">
+              <div class="d-flex align-items-center">                
+                <div class="d-block">
+                  <h2 class="h5 mb-3">Hi, {{request.user.username}}</h2>
+                  <a href="{% url 'logout' %}" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+                    <i class="fa-solid fa-right-from-bracket"></i>           
+                    Sign Out
+                  </a>
+                </div>
+              </div>
+              <div class="collapse-close d-lg-none">
+                <a href="#sidebarMenu" data-bs-toggle="collapse"
+                    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true"
+                    aria-label="Toggle navigation">
+                    <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                  </a>
+              </div>
+            </div>
+            <ul class="nav flex-column pt-3 pt-lg-0">
+              <div class="rounded-circle mb-4 mx-auto justify-content-center d-flex p-3 bgjessica-primary w-50 w-sm-7">                                                
+                <img src="{{ user.usertype.icon.url }}" loading="lazy" class="img-fluid" alt="{{user.usertype.name}}" height="100px" width="auto" title="{{user.usertype.name}}">
+              </div>     
+              
+              {% for dm in dashboard_menu %}
+              <li class="nav-item {% if dm.url == request.path %} active {% endif %}">
+                <a href={{dm.url}} class="nav-link  collapsed  d-flex justify-content-between align-items-center" {% if dm.childs %}  data-bs-toggle="collapse" data-bs-target="#submenu-app{{ forloop.counter0 }}" {% endif %}>          
+                  <span>
+                    <span class="sidebar-icon">
+                      {{dm.icon|safe}}                     
+                    </span> 
+                    <span class="sidebar-text">{{dm.title}}</span>
+                  </span>
+                  {% if dm.childs %}
+                  <span class="link-arrow">
+                    <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </span>
+                  {% endif %}
+                </a>
+                {% if dm.childs %}
+                {% for dmc in dm.childs %}
+                <div class="multi-level collapse {% if 'leads' in segment %} show {% endif %}"
+                  role="list" id="submenu-app{{ forloop.parentloop.counter0 }}" aria-expanded="false">
+                  <ul class="flex-column nav">
+                    <li class="nav-item {% if dm.url == request.path %} active {% endif %}">
+                      <a class="nav-link" href="{{dmc.url}}">
+                        <span class="sidebar-text">{{dmc.title}}</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                {% endfor %}
+                {% endif %}
+              </li>              
+             {% endfor %}
+            </ul>
+          </div>
+        </nav>
