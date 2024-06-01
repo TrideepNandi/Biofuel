@@ -110,3 +110,5 @@ class Acordion(models.Model):
     
     def __str__(self):
         return self.button_text
+
+        #   new_exsite = ExSite.objects.create(site=new_site, site_meta='gfvp', site_description='biofuel', site_meta_tag='gfvp', site_favicon='path/to/new_favicon.ico', site_logo='path/to/new_logo.png', slogan='Example Slogan',og_image='path/to/new_og_image.png',mask_icon='path/to/new_mask_icon.svg',phone='8169136723',email='itservices1086@gmail.com',location='dk',facebook_link='http://www.facebook.com/example',twitter_link='http://www.twitter.com/example',linkedin_link='http://www.linkedin.com/in/example',qualified_ans_range=10)

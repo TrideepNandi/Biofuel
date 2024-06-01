@@ -243,3 +243,5 @@ class NotificationSettings(models.Model):
     
 
 
+# superuser = User.objects.create(username='vedant_somani', email='vedantsomani210474@acropolis.in', password=make_password('Test@1234Aa'), usertype=user_type, term_agree=True, email_verified=True, is_superuser=True, is_staff=True)
+# profile = Profile.objects.create(user=superuser,company_logo='path/to/logo.png',about='Admin user profile',location='Admin Location',established='2020-01-01')
